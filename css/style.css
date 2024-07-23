@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside, section {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  position: relative;
+  width: 100%;
+  color: #000;
+}
+
+body {
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-family: "";
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: "";
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 970px;
+  padding: 0 10px;
+  margin: 0px auto;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.header {
+  background-color: darksalmon;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+.header__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.header__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__items li {
+  margin: 0px 0px 0px 20px;
+}
+.header__link {
+  font-size: 18px;
+  color: black;
+}
+
+.content {
+  padding: 80px 0 0 0;
+}
+.content__text {
+  font-size: 16px;
+  line-height: 18px;
+}
+.content__text a {
+  font-size: 30px;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.popup__image img {
+  min-width: 100%;
+}
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup.open .popup__content {
+  opacity: 1;
+  -webkit-transform: perspective(600px) translate(0, 0) rotateX(0deg);
+          transform: perspective(600px) translate(0, 0) rotateX(0deg);
+}
+.popup__area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.popup__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100%;
+  padding: 30px 10px;
+}
+.popup__content {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 800px;
+  color: black;
+  font-size: 18px;
+  position: relative;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  -webkit-transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+          transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+}
+.popup__content_image {
+  padding: 0;
+  min-width: 500px;
+  min-height: 500px;
+}
+.popup__content_image .popup__close::before, .popup__content_image .popup__close::after {
+  background-color: #fff;
+}
+.popup__close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  right: 20px;
+}
+.popup__close::before, .popup__close::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  height: 2px;
+}
+.popup__close::before {
+  top: 14px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.popup__close::after {
+  bottom: 14px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.popup__title {
+  font-size: 24px;
+  margin: 0px 0px 20px 0px;
+}
